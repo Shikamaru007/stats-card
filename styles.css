@@ -8,4 +8,157 @@
     margin: 0;
     box-sizing: border-box;
 }
+html {
+    font-size: 16px;
+}
+body {
+    font-family: "Inter", sans-serif;
+    color: white;
+    letter-spacing: .6px;
+}
+section {
+    width: 100%;
+    height: 100vh;
+    background-color: rgb(9, 11, 26);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.container {
+    background-color: rgb(27, 25, 56);
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    margin: auto;
+    width: 80%;
+    border-radius: 10px;
+}
+.mobile {
+    display: none;
+}
+.desktop {
+    border-radius: 0 10px 10px 0;
+}
+.left {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 5em 7em 5em 5em;
+}
+.stats {
+    display: flex;
+    gap: 3rem;
+}
+.stats span {
+    font-family: "Lexend Deca", sans-serif;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    font-weight: 400;
+}
+.stats p {
+    font-size: 1.5rem;
+    font-weight: 700;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+}
+.right {
+    display: flex;
+    position: relative;
+}
+.right img {
+    width: 100%;
+}
+.right::after{
+    content: "";
+    width: 100%;
+    height: 100%;
+    background-color: rgba(73, 1, 118, 0.611);
+    position: absolute;
+}
+h1 {
+    font-size: 2.5rem;
+    margin-bottom: 2rem;
+    font-weight: 700;
+}
+h1 span {
+    color: rgb(170, 92, 219);
+}
+.left p {
+    line-height: 1.55;
+}
+.text-content p,
+.stats span {
+    color: rgba(255, 255, 255, 0.75);;
+}
+.text-content {
+    margin-bottom: 1rem;
+}
+
+
+@media screen and (max-width:1470px){
+   
+    h1 {
+        margin-bottom: 1rem;
+    }
+    .left {
+        padding-right: 5rem;
+    }
+}
+
+@media screen and (max-width:1330px){
+    
+    h1 {
+        font-size: 2rem;
+    }
+    .left {
+        padding: 4rem;
+    }
+}
+@media screen and (max-width:1090px){
+   
+    .left {
+        padding: 2.5rem;
+    }
+}
+@media screen and (max-width:769px){
+    html {
+        font-size: 15px;
+    }
+    .container {
+        grid-template-columns: 1fr;
+        max-width: 45%;
+        text-align: center;
+    }
+    .right {
+        order: calc(-1);
+        border-radius: 10px 10px 0 0;
+    
+    }
+    .right img {
+        border-radius: 10px 10px 0 0;
+    }
+    .mobile{
+        display: block;
+        border-radius: 10px;
+        width: 100%;
+    }
+    .desktop{
+        display: none;
+    }
+    .right::after{
+        border-radius: 10px 10px 0 0;
+    }
+    .stats {
+        flex-direction: column;
+        gap: 2rem;
+    }
+}
+@media screen and (max-width:620px){
+    .container{
+        max-width: 90%;
+    }
+    .stats {
+        gap: 3rem;
+    }
+}
+
 
