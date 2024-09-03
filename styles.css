@@ -110,22 +110,22 @@ h1 span {
         font-size: 2rem;
     }
     .left {
-        padding: 4rem;
-    }
-}
-@media screen and (max-width:1090px){
-   
-    .left {
         padding: 2.5rem;
     }
 }
-@media screen and (max-width:769px){
+@media screen and (max-width:1107px){
     html {
         font-size: 15px;
     }
+    h1 {
+        font-size: 2rem;
+    }
+    .left {
+        padding: 1.5rem;
+    }
     .container {
         grid-template-columns: 1fr;
-        max-width: 45%;
+        max-width: 55%;
         text-align: center;
     }
     .right {
@@ -148,16 +148,61 @@ h1 span {
         border-radius: 10px 10px 0 0;
     }
     .stats {
-        flex-direction: column;
         gap: 2rem;
+        margin: auto;
+    }
+}
+@media screen and (max-width:895px){
+    .container {
+        max-width: 59%;
+    }
+    .text-content{
+        margin-bottom: 2rem;
+    }
+}
+@media screen and (max-width:769px){    
+    .container {
+        grid-template-columns: 1fr;
+        max-width: 65%;
+        text-align: center;
     }
 }
 @media screen and (max-width:620px){
+    html {
+        font-size: 14px;
+    }
     .container{
         max-width: 90%;
     }
     .stats {
         gap: 3rem;
+    }
+}
+@media screen and (max-width:509px){
+    h1 {
+        font-size: 1.5rem;
+    }
+    .stats {
+        flex-direction: column;
+        gap: 2rem;
+    }    
+    .block p {
+        font-size: 1.3rem;
+        line-height: 1.2;
+    }
+    .stats span {
+        font-size: .8rem;
+    }
+    .left {
+        padding: 1rem;
+    }
+    .container {
+        max-width: 60%;
+    }
+}
+@media screen and (max-width:426px){
+    .container{
+        max-width: 100%;
     }
 }
 
